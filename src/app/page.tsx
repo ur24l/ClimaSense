@@ -21,7 +21,7 @@ export default function WeatherPage() {
   const [error, setError] = React.useState<string | null>(null);
   const { toast } = useToast();
 
-  const fallbackCity = "London";
+  const fallbackCity = "Vizag";
 
   React.useEffect(() => {
     if (navigator.geolocation) {
