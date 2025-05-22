@@ -75,7 +75,7 @@ const WeatherInsightsCard: React.FC<WeatherInsightsCardProps> = ({ city, current
   if (!city || !currentWeather) return null; // Don't render if no city/weather to analyze
 
   return (
-    <Card className="w-full bg-app-card-bg text-app-card-text shadow-lg rounded-xl">
+    <Card className="w-full bg-app-card-bg text-app-card-text shadow-lg rounded-xl transition-shadow hover:shadow-xl">
       <CardHeader>
         <CardTitle className="text-xl font-semibold text-app-header-text flex items-center">
           <Lightbulb className="mr-2 h-5 w-5" /> AI Weather Insights

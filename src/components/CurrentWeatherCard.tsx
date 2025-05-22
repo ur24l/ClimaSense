@@ -12,7 +12,7 @@ interface CurrentWeatherCardProps {
 const CurrentWeatherCard: React.FC<CurrentWeatherCardProps> = ({ data, isLoading }) => {
   if (isLoading) {
     return (
-      <Card className="w-full max-w-md bg-app-card-bg text-app-card-text shadow-lg">
+      <Card className="w-full max-w-md bg-app-card-bg text-app-card-text shadow-lg rounded-xl">
         <CardHeader>
           <Skeleton className="h-8 w-3/4" />
           <Skeleton className="h-4 w-1/2 mt-1" />
@@ -48,7 +48,7 @@ const CurrentWeatherCard: React.FC<CurrentWeatherCardProps> = ({ data, isLoading
   if (!data) return null;
 
   return (
-    <Card className="w-full max-w-md bg-app-card-bg text-app-card-text shadow-lg rounded-xl overflow-hidden">
+    <Card className="w-full max-w-md bg-app-card-bg text-app-card-text shadow-lg rounded-xl overflow-hidden transition-shadow hover:shadow-xl">
       <CardHeader className="bg-primary/10 p-6">
         <CardTitle className="text-3xl font-bold text-primary">{data.city}</CardTitle>
         <CardDescription className="text-primary/80">

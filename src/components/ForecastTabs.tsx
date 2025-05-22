@@ -61,7 +61,7 @@ const ForecastTabs: React.FC<ForecastTabsProps> = ({ data, isLoading, timezoneOf
   if (!data || (!data.hourly?.length && !data.daily?.length)) return null;
 
   return (
-    <Card className="w-full bg-app-card-bg text-app-card-text shadow-lg rounded-xl">
+    <Card className="w-full bg-app-card-bg text-app-card-text shadow-lg rounded-xl transition-shadow hover:shadow-xl">
       <CardHeader>
         <CardTitle className="text-xl font-semibold text-app-header-text">Forecast</CardTitle>
       </CardHeader>
