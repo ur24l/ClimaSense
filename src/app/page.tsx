@@ -125,7 +125,9 @@ export default function WeatherPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-app-header-text flex items-center justify-center">
             <ThermometerSun size={48} className="mr-3 text-primary" /> ClimaSense
           </h1>
-          <p className="text-muted-foreground text-lg">Your intelligent weather companion.</p>
+          <p className="text-muted-foreground text-lg max-w-xl">
+            Don't just check the weather, feel it. Get AI-powered insights, personalized recommendations, and the true 'vibe' of your day, in real-time.
+          </p>
         </header>
 
         <WeatherSearch

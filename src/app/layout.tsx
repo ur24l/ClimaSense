@@ -9,7 +9,7 @@ const geistMono = GeistMono;
 
 export const metadata: Metadata = {
   title: 'ClimaSense',
-  description: 'Intelligent weather forecasts and insights',
+  description: "Don't just check the weather, feel it. Get AI-powered insights, personalized recommendations, and the true 'vibe' of your day, in real-time.",
 };
 
 export default function RootLayout({
