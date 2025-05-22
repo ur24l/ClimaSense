@@ -6,7 +6,7 @@ export default function Loading() {
     <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 space-y-6 bg-app-bg text-app-text">
       <header className="text-center space-y-2 mb-8">
         <h1 className="text-4xl md:text-5xl font-bold text-app-header-text flex items-center justify-center">
-          <ThermometerSun size={48} className="mr-3 text-primary animate-pulse" /> WeatherWise
+          <ThermometerSun size={48} className="mr-3 text-primary animate-pulse" /> ClimaSense
         </h1>
         <p className="text-muted-foreground text-lg">Loading weather data...</p>
       </header>

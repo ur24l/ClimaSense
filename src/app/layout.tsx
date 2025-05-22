@@ -8,7 +8,7 @@ const geistSans = GeistSans;
 const geistMono = GeistMono;
 
 export const metadata: Metadata = {
-  title: 'WeatherWise',
+  title: 'ClimaSense',
   description: 'Intelligent weather forecasts and insights',
 };
 

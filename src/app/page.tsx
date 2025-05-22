@@ -39,7 +39,7 @@ export default function WeatherPage() {
           toast({
             title: "Location Access Denied/Failed",
             description: `Could not get your location: ${geoError.message}. Showing weather for ${fallbackCity}.`,
-            variant: "default", 
+            variant: "default",
           });
           handleSearch(fallbackCity);
         }
@@ -66,7 +66,7 @@ export default function WeatherPage() {
     // Don't clear city here, let it be set by the outcome or stay from previous successful search
     // setCurrentWeather(null); // Clear previous data
     // setForecast(null);     // Clear previous data
-    
+
     let cityForDisplayUpdate: string;
     if (typeof searchParam === 'string') {
       cityForDisplayUpdate = searchParam;
@@ -87,11 +87,11 @@ export default function WeatherPage() {
         fetchCurrentWeather(searchParam),
         fetchForecast(searchParam)
       ]);
-      
+
       setCurrentWeather(weatherResult);
       setForecast(forecastResult);
       setCity(weatherResult.city); // Update city state with resolved name from API
-      
+
       if (typeof searchParam !== 'string' && weatherResult.city === "Your Location") {
         // No redundant toast if already shown for "Location Detected"
       } else {
@@ -123,15 +123,15 @@ export default function WeatherPage() {
       <div className="min-h-screen flex flex-col items-center p-4 md:p-8 space-y-6 bg-app-bg text-app-text">
         <header className="text-center space-y-2">
           <h1 className="text-4xl md:text-5xl font-bold text-app-header-text flex items-center justify-center">
-            <ThermometerSun size={48} className="mr-3 text-primary" /> WeatherWise
+            <ThermometerSun size={48} className="mr-3 text-primary" /> ClimaSense
           </h1>
           <p className="text-muted-foreground text-lg">Your intelligent weather companion.</p>
         </header>
 
-        <WeatherSearch 
-          onSearch={handleSearch} 
-          isLoading={isLoading} 
-          initialCity={city || (isLoading && !city ? "Detecting location..." : fallbackCity)} 
+        <WeatherSearch
+          onSearch={handleSearch}
+          isLoading={isLoading}
+          initialCity={city || (isLoading && !city ? "Detecting location..." : fallbackCity)}
         />
 
         {error && (
@@ -151,7 +151,7 @@ export default function WeatherPage() {
                 <WeatherInsightsCard city={city} currentWeather={currentWeather} isLoadingTrigger={isLoading && !currentWeather && !error} />
             )}
           </div>
-          
+
            {(isLoading || forecast) && (
             <div className="w-full md:row-start-1 md:col-start-2">
                  <ForecastTabs data={forecast} isLoading={isLoading && !forecast && !error} timezoneOffset={currentWeather?.timezoneOffset ?? 0} />
