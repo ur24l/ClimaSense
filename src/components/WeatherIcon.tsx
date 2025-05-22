@@ -3,6 +3,7 @@ import {
   Sun, Cloud, CloudRain, CloudDrizzle, Snowflake, CloudLightning, CloudFog, Thermometer, Wind, Droplets, Sunrise, Sunset, Gauge, Zap, CloudSun, CloudMoon, TornadoIcon, CloudSunRain, CloudMoonRain, Cloudy
 } from 'lucide-react';
 import type { LucideProps } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface WeatherIconProps extends LucideProps {
   conditionKey?: WeatherConditionKey;
